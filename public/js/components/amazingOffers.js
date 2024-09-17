@@ -64,5 +64,6 @@ async function amzingOffer() {
   }
   await fetchSlides();
   initamzingOffer();
-}
+};
+amzingOffer();
 export default amzingOffer;
