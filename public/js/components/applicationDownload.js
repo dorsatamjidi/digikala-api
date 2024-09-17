@@ -48,6 +48,5 @@ function applicationDownload() {
             applicationDownload__active.classList.add("mobile:hidden");
         }, 300)
     })
-}
-applicationDownload();
+};
 export default applicationDownload;
