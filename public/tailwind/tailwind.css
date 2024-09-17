@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after, *::placeholder {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    text-decoration: none;
+}
+@font-face {
+    font-family: iranYekanRegular;
+    src: url(../fonts/IranYekan/iranyekanwebregular.ttf);
+    src: url(../fonts/IranYekan/iranyekanwebregular.eot);
+    src: url(../fonts/IranYekan/iranyekanwebregular.woff);
+}
+@font-face {
+    font-family: iranYekanMedium;
+    src: url(../fonts/IranYekan/iranyekanwebmedium.ttf);
+    src: url(../fonts/IranYekan/iranyekanwebmedium.eot);
+    src: url(../fonts/IranYekan/iranyekanwebmedium.woff);
+}
+@font-face {
+    font-family: iranYekanBold;
+    src: url(../fonts/IranYekan/iranyekanwebbold.ttf);
+    src: url(../fonts/IranYekan/iranyekanwebbold.eot);
+    src: url(../fonts/IranYekan/iranyekanwebbold.woff);
+}
+@font-face {
+    font-family: iranYekanLight;
+    src: url(../fonts/IranYekan/iranyekanweblight.ttf);
+    src: url(../fonts/IranYekan/iranyekanweblight.eot);
+    src: url(../fonts/IranYekan/iranyekanweblight.woff);
+}
+@font-face {
+    font-family: iranYekanFaNum;
+    src: url(../fonts/IranYekan/IRANYekanMediumFaNum.ttf);
+}
+:root {
+    --font-family: iranYekanRegular;
+    --font-family-medium: iranYekanMedium;
+    --font-family-bold: iranYekanBold;
+    --font-family-light: iranYekanLight;
+    --font-family-fanum: iranYekanFaNum;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+.swiper-pagination-bullet-active {
+    background-color: aliceblue !important;
+    width: 16px !important;
+    border-radius: 5px 5px 5px 5px !important;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f0f0f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #c0c2c5;
+}
