@@ -40,5 +40,5 @@ function bestOffers() {
     fetchProducts();
 
 }
-
+bestOffers();
 export default bestOffers;
