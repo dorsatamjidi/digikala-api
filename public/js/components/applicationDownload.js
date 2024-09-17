@@ -49,5 +49,5 @@ function applicationDownload() {
         }, 300)
     })
 }
-
+applicationDownload();
 export default applicationDownload;
