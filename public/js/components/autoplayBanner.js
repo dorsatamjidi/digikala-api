@@ -43,6 +43,5 @@ async function autoplayBanner() {
 
   await fetchSlides();
   initautoplayBanner();
-}
-autoplayBanner();
+};
 export default autoplayBanner;
