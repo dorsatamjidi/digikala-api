@@ -40,7 +40,8 @@ async function amzingOffer() {
   
     async function fetchSlides() {
       try {
-        let res = await axios.get("http://localhost:3000/amazingOffers");
+        let data = await fetch("http://localhost:3000/amazingOffers");
+        let res = await data.json();
         let slides = res.data.map((item) => {
           return `<div class="swiper-slide mobile:!w-[130px] deskt:!w-[160px] !h-full bg-white px-[10px] py-3">
                    <a href="" class="w-full h-full flex flex-col justify-between items-center">
@@ -114,7 +115,8 @@ async function amzingOffer() {
   
     async function fetchSlides() {
       try {
-        let res = await axios.get("http://localhost:3000/autoplayBanner");
+        let data = await fetch("http://localhost:3000/autoplayBanner");
+        let res = await data.json();
         let slide = res.data.map((item) => {
           return `<div class="swiper-slide !w-full !h-full">
                   <a href="#">
@@ -142,7 +144,8 @@ async function amzingOffer() {
 
     async function fetchProducts() {
         try {
-            let res = await axios.get("http://localhost:3000/bestOffers");
+            let data = await fetch("http://localhost:3000/bestOffers");
+            let res = await data.json();
             let products = res.data.map((item) =>{
                 return`<a href="" class="w-full h-full flex flex-col justify-between items-center px-2 py-3 bg-white">
                   <div class="w-fit h-fit relative">
@@ -185,7 +188,8 @@ function popularCategory() {
 
     async function fetchProducts__1() {
         try {
-            let res = await axios.get("http://localhost:3000/popularCategory__1");
+            let data = await fetch("http://localhost:3000/popularCategory__1");
+            let res = await data.json();
             let products = res.data.map((item) =>{
                 return `<div class="px-5 py-2 bg-white">
               <div class="py-2">
@@ -232,7 +236,8 @@ function popularCategory() {
     }
     async function fetchProducts__2() {
         try {
-            let res = await axios.get("http://localhost:3000/popularCategory__2");
+            let data = await fetch("http://localhost:3000/popularCategory__2");
+            let res = await data.json();
             let products = res.data.map((item) =>{
                 return `<div class="px-5 py-2 bg-white">
               <div class="py-2">
@@ -301,7 +306,8 @@ async function story() {
   
     async function fetchSlides() {
       try {
-        let res = await axios.get("http://localhost:3000/story");
+        let data = await fetch("http://localhost:3000/story");
+        let res = await data.json();
         let slides = res.data.map((item) => {
           return `<div class="swiper-slide mobile:!w-[100px] deskt:!w-[112px]">
                   <div class="w-full h-full px-2 py-4 flex flex-col justify-start items-center">
