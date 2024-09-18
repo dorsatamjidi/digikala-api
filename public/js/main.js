@@ -306,7 +306,7 @@ async function story() {
   
     async function fetchSlides() {
       try {
-        let data = await fetch("http://localhost:3000/story");
+        let data = await fetch("https://dorsatamjidi.github.io/digikala-json/story.json");
         let res = await data.json();
         let slides = res.map((item) => {
           return `<div class="swiper-slide mobile:!w-[100px] deskt:!w-[112px]">
