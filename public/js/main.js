@@ -144,7 +144,7 @@ async function amzingOffer() {
 
     async function fetchProducts() {
         try {
-        let data = await fetch("http://localhost:3000/bestOffers");
+        let data = await fetch("https://dorsatamjidi.github.io/digikala-json/bestOffers.json");
         let res = await data.json();
             let products = res.map((item) =>{
                 return`<a href="" class="w-full h-full flex flex-col justify-between items-center px-2 py-3 bg-white">
