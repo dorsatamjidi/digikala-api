@@ -40,7 +40,7 @@ async function amzingOffer() {
   
     async function fetchSlides() {
       try {
-        let data = await fetch("http://localhost:3000/amazingOffers");
+        let data = await fetch("https://dorsatamjidi.github.io/digikala-json/amazingOffers.json");
         let res = await data.json();
         let slides = res.map((item) => {
           return `<div class="swiper-slide mobile:!w-[130px] deskt:!w-[160px] !h-full bg-white px-[10px] py-3">
@@ -115,7 +115,7 @@ async function amzingOffer() {
   
     async function fetchSlides() {
       try {
-        let data = await fetch("http://localhost:3000/autoplayBanner");
+        let data = await fetch("https://dorsatamjidi.github.io/digikala-json/autoplaybanner.json");
         let res = await data.json();
         let slide = res.map((item) => {
           return `<div class="swiper-slide !w-full !h-full">
@@ -188,7 +188,7 @@ function popularCategory() {
 
     async function fetchProducts__1() {
         try {
-        let data = await fetch("http://localhost:3000/popularCategory__1");
+        let data = await fetch("https://dorsatamjidi.github.io/digikala-json/popularCategory__1.json");
         let res = await data.json();
             let products = res.map((item) =>{
                 return `<div class="px-5 py-2 bg-white">
@@ -236,7 +236,7 @@ function popularCategory() {
     }
     async function fetchProducts__2() {
         try {
-        let data = await fetch("http://localhost:3000/popularCategory__2");
+        let data = await fetch("https://dorsatamjidi.github.io/digikala-json/popularCategory__2.json");
         let res = await data.json();
             let products = res.map((item) =>{
                 return `<div class="px-5 py-2 bg-white">
