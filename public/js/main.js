@@ -1,15 +1,14 @@
-import digiServices from "./components/digiServices";
-import initcategory from "./components/category";
-import initpopularBrands from "./components/popularBrands";
-import initbestSellers from "./components/bestSellers";
-import citySelection from "./components/citySelection";
-import searchBar from "./components/searchBar";
-import applicationDownload from "./components/applicationDownload";
-import contactUs from "./components/contactUs";
-import footer from "./components/footer";
-import supermarket from "./components/superMarket";
-import header from "./components/header";
-import axios from "axios";
+import digiServices from "./components/digiServices.js";
+import initcategory from "./components/category.js";
+import initpopularBrands from "./components/popularBrands.js";
+import initbestSellers from "./components/bestSellers.js";
+import citySelection from "./components/citySelection.js";
+import searchBar from "./components/searchBar.js";
+import applicationDownload from "./components/applicationDownload.js";
+import contactUs from "./components/contactUs.js";
+import footer from "./components/footer.js";
+import supermarket from "./components/superMarket.js";
+import header from "./components/header.js";
 citySelection();
 digiServices();
 initcategory();
@@ -41,8 +40,9 @@ async function amzingOffer() {
   
     async function fetchSlides() {
       try {
-        let res = await axios.get("http://localhost:3000/amazingOffers");
-        let slides = res.data.map((item) => {
+        let data = await fetch("http://localhost:3000/amazingOffers");
+        let res = await data.json();
+        let slides = res.map((item) => {
           return `<div class="swiper-slide mobile:!w-[130px] deskt:!w-[160px] !h-full bg-white px-[10px] py-3">
                    <a href="" class="w-full h-full flex flex-col justify-between items-center">
                     <div class="w-fit h-fit relative">
@@ -115,8 +115,9 @@ async function amzingOffer() {
   
     async function fetchSlides() {
       try {
-        let res = await axios.get("http://localhost:3000/autoplayBanner");
-        let slide = res.data.map((item) => {
+        let data = await fetch("http://localhost:3000/autoplayBanner");
+        let res = await data.json();
+        let slide = res.map((item) => {
           return `<div class="swiper-slide !w-full !h-full">
                   <a href="#">
                     <img src=${item.src}
@@ -143,8 +144,9 @@ async function amzingOffer() {
 
     async function fetchProducts() {
         try {
-            let res = await axios.get("http://localhost:3000/bestOffers");
-            let products = res.data.map((item) =>{
+        let data = await fetch("http://localhost:3000/bestOffers");
+        let res = await data.json();
+            let products = res.map((item) =>{
                 return`<a href="" class="w-full h-full flex flex-col justify-between items-center px-2 py-3 bg-white">
                   <div class="w-fit h-fit relative">
                     <img src=${item.src} alt="" class="mobile:w-[130px] deskt:w-[150px]">
@@ -186,8 +188,9 @@ function popularCategory() {
 
     async function fetchProducts__1() {
         try {
-            let res = await axios.get("http://localhost:3000/popularCategory__1");
-            let products = res.data.map((item) =>{
+        let data = await fetch("http://localhost:3000/popularCategory__1");
+        let res = await data.json();
+            let products = res.map((item) =>{
                 return `<div class="px-5 py-2 bg-white">
               <div class="py-2">
                 <h4 class="text-[16px] font-[iranYekanBold] text-[#23254e] mb-2">${item.title}</h4>
@@ -233,8 +236,9 @@ function popularCategory() {
     }
     async function fetchProducts__2() {
         try {
-            let res = await axios.get("http://localhost:3000/popularCategory__2");
-            let products = res.data.map((item) =>{
+        let data = await fetch("http://localhost:3000/popularCategory__2");
+        let res = await data.json();
+            let products = res.map((item) =>{
                 return `<div class="px-5 py-2 bg-white">
               <div class="py-2">
                 <h4 class="text-[16px] font-[iranYekanBold] text-[#23254e] mb-2">${item.title}</h4>
@@ -302,8 +306,9 @@ async function story() {
   
     async function fetchSlides() {
       try {
-        let res = await axios.get("http://localhost:3000/story");
-        let slides = res.data.map((item) => {
+        let data = await fetch("http://localhost:3000/story");
+        let res = await data.json();
+        let slides = res.map((item) => {
           return `<div class="swiper-slide mobile:!w-[100px] deskt:!w-[112px]">
                   <div class="w-full h-full px-2 py-4 flex flex-col justify-start items-center">
                     <div
