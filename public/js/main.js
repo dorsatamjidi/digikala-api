@@ -9,7 +9,6 @@ import contactUs from "./components/contactUs";
 import footer from "./components/footer";
 import supermarket from "./components/superMarket";
 import header from "./components/header";
-import axios from "axios";
 citySelection();
 digiServices();
 initcategory();
